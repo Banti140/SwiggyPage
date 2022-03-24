@@ -4,7 +4,6 @@
   align-items: center;
   background-color: black;
   margin: 0 10px;
-  /* margin-top: 1000px; */
 }
 
 .support-team-info {
@@ -21,21 +20,14 @@
   flex: 2;
 }
 
-.social-media-link {
-  margin-right: 20px ;
-}
-
-/* .suppport-contact-number {
-  display: flex;
-  text-align: left;
-} */
-
-.suppport-email-address {
-  display: flex;
-  /* text-align: right; */
-}
-
 .support-details {
   margin-left: 40px;
   text-align: right;
 }
+
+
+.social-media-link {
+  margin-right: 20px ;
+}
+
+

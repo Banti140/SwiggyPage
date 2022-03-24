@@ -1,9 +1,9 @@
 import "./App.css";
 
 //Importing Components
-import Header from "./components/Header/Header";
+import Header from "./components/Header/HeaderLeft";
 import Footer from "./components/Footer/Footer";
-import MiddlePage from "./components/RestroPage/MiddlePage";
+// import MiddlePage from "./components/RestroPage/MiddlePage";
 import { Component } from "react";
 
 
@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <MiddlePage/>
+        {/* <MiddlePage/> */}
         <Footer />
       </div>
     );

@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import './HeaderRightOption.css';
 
-export class HeaderRightOption extends Component {
-  // constructor(props)
-  // {
-  //     super(props);
-  //     
-  // }
-    
+ class HeaderRightOption extends Component {
+  
   render() {
     // console.log(this.props);
     return <div className='tab_option'>
