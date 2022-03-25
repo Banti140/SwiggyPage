@@ -1,0 +1,3 @@
+import RESTRODISCHES from "./RESTRODISCHES";
+
+export default RESTRODISCHES;

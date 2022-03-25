@@ -1,3 +1,3 @@
-import HeaderRightconst from "./HeaderRightconst";
+import OPTIONS from "./OPTIONS";
 
-export default HeaderRightconst;
+export default OPTIONS;
