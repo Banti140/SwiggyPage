@@ -2,7 +2,7 @@ import React from "react";
 import "./MainMenuData.css";
 import Button from "@material-ui/core/Button";
 
-function RestroDetailList({ id, Name,Price,Description,Pic_Id}) {
+function MainMenuData({ id, Name,Price,Description,Pic_Id}) {
   return (
     <div className="restrodetaillist">
       <div className="restrodetaillist-info">
@@ -23,4 +23,4 @@ function RestroDetailList({ id, Name,Price,Description,Pic_Id}) {
   );
 }
 
-export default RestroDetailList;
+export default MainMenuData;

@@ -1,7 +1,7 @@
 import MainMenuLists from "./RestroDetailsLists/MainMenuLists";
 // import BlackPart from "./RestroPage_Banner/BlackPart";
 
-function RestroPage() {
+function MiddlePage() {
     return (
       <div className="restropage-parent">
         {/* <BlackPart/> */}
@@ -10,4 +10,4 @@ function RestroPage() {
     );
 }
 
-export default RestroPage;
+export default MiddlePage;

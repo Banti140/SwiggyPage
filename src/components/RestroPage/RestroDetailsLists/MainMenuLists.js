@@ -2,7 +2,7 @@ import MainMenuData from "./MainMenuData";
 import "./MainMenuLists.css";
 import RESTRODISCHES from "./Constants/RESTRODISCHES.js"
 
-  function RestroDetailsLists() {
+  function MainMenuLists() {
     return (
       <div className="restrolists">
         <div className="restrolists-left">Recommended
@@ -29,4 +29,4 @@ import RESTRODISCHES from "./Constants/RESTRODISCHES.js"
   }
 
 
-export default RestroDetailsLists;
+export default MainMenuLists;
