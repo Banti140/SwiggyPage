@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import './HeaderRight.css';
 //Importing componenents
-import TabOption from './HeaderRightOption/HeaderRightOption';
-import OPTIONS from './Constants/OPTIONS.js'
+import HeaderRightOption from './HeaderRightOption/HeaderRightOption';
+import OPTIONS from './HeaderRightOption/constants/OPTIONS'
+
+HeaderRightOption.defaultProps = {
+  details: {}
+  }
 
   function HeaderRight() {
-    return <div className='tab_options'>
-        {OPTIONS.map((option)=>
-        {    
-        return <TabOption key={option.id} details={option}/>
-        })}
-    </div>;
+    return ReturnHeaderRightOption();
   }
+
+  function ReturnHeaderRightOption(){
+    return <div className='tab_options'>
+    {OPTIONS.map((option)=>
+    {    
+    return <HeaderRightOption key={option.id} details={option}/>
+    })}
+  </div>;
+  }
+
 
 export default HeaderRight;
