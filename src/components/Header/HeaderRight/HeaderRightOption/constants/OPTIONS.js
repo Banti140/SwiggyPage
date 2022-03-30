@@ -8,12 +8,12 @@ const OPTIONS = [
       id: 2,
     },
     {
-      name: "Sign In",
-      id: 3,
+      name: "Cart",
+      id: 4, 
     },
     {
-      name: "Cart",
-      id: 4,
+      name: "Sign In",
+      id: 3,
     }];
 
 export default OPTIONS;
