@@ -3,7 +3,7 @@ import MainMenuData from "./MainMenuData";
 import "./MainMenuLists.css";
 import RESTRODISCHES from "./constants/mainMenuLists.option.js"
 import Cart from "./Cart/Cart";
-import { handleClick } from "./handleClick";
+import { handleClick } from "./helpers/mainMenuLists.general";
 
 class MainMenuLists extends Component {
   constructor() {
