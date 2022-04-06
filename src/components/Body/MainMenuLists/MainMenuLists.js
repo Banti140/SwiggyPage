@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import MainMenuData from "./MainMenuData";
 import "./MainMenuLists.css";
-import RESTRODISCHES from "./constants/RESTRODISCHES.Option.js"
+import RESTRODISCHES from "./constants/mainMenuLists.option.js"
 import Cart from "./Cart/Cart";
-import { handleClickHelper } from "./handleClickHelper";
+import { handleClick } from "./handleClick";
 
 class MainMenuLists extends Component {
   constructor() {
@@ -12,12 +12,12 @@ class MainMenuLists extends Component {
       cart: [],
     }
   }
-  //  constDetails= { name, price, description, pic_Id, id }
+  //  selectedDish= { name, price, description, pic_Id, id }
 
-  dishClicked = (constDetails) => {
+  dishClicked = (selectedDish) => {
     let newCopiedCart = [...(this.state.cart)]
-    let Cart = handleClickHelper.handleClick(constDetails, newCopiedCart);
-    this.setState({ cart: Cart });
+    let cart = handleClick(selectedDish, newCopiedCart);
+    this.setState({ cart: cart });
   };
 
   mainMenuItems = (dish) => {
@@ -40,11 +40,11 @@ class MainMenuLists extends Component {
         <div className="restrolists-left">
           Recommended
           <div className="recommendation">
-            platter<br></br>
-            Appetizer <br></br>
-            Family Bolinge Packs <br></br>
-            Dessert & Beverages <br></br>
-            Accompaniments
+            <div>platter</div>
+            <div> Appetizer </div>
+            <div>Family Bolinge Packs </div>
+            <div>Dessert & Beverages</div>
+            <div>Accompaniments</div>
           </div>
         </div>
         <div className="restrolists-main">

@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import "./MainMenuData.css";
 import Button from "@material-ui/core/Button";
-import Cart from "./Cart/Cart";
+// import Cart from "./Cart/Cart";
 
 class MainMenuData extends Component {
 
   handleClick = () => {
-    const { name, price, description, pic_Id, dishClicked, id, cart } = this.props;
+    const { name, price, description, pic_Id, dishClicked, id } = this.props;
     return dishClicked({ name, price, description, pic_Id, id });
   }
 
   render() {
-    const { id, name, price, description, pic_Id, dishClicked } = this.props;
+    const { name, price, description, pic_Id } = this.props;
     return (<div className="restrodetaillist">
       <div className="restrodetaillist-info">
         <p>{name}</p>

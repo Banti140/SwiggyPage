@@ -1,17 +1,13 @@
 import React, { Component } from "react";
 import "./Cart.css";
 import Button from "@material-ui/core/Button";
-import RESTRODISCHES from "../constants/RESTRODISCHES.Option";
+import RESTRODISCHES from "../constants/mainMenuLists.option";
 
 class Cart extends Component {
 
   constructor() {
     super();
     this.printCartedItem = this.printCartedItem.bind(this);
-  }
-
-  handleMovetoBuyClick() {
-    return alert("Thanks For Purchasing !");
   }
 
   findDishById(dish) {
@@ -34,9 +30,9 @@ class Cart extends Component {
   getTotal(cartDetails) {
     let totalAmount = 0;
 
-    cartDetails.forEach((dishes) => {
-      let cartDish = (RESTRODISCHES.find(this.findDishById(dishes)));
-      totalAmount += parseFloat(dishes.quantity) * parseFloat(cartDish.details.price);
+    cartDetails.forEach((cartItem) => {
+      let dish = (RESTRODISCHES.find(this.findDishById(cartItem)));
+      totalAmount += parseFloat(cartItem.quantity) * parseFloat(dish.details.price);
     });
     return totalAmount;
   }
@@ -52,11 +48,6 @@ class Cart extends Component {
       {cartDetails.map(this.printCartedItem)}
 
       <p> Total :  {totalAmount}Rs</p>
-      <div className="btn-checkout">
-        <Button variant="contained" color="primary" onClick={this.handleMovetoBuyClick}>
-          Move to Buy
-        </Button>
-      </div>
     </div>
   }
 }
