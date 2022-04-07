@@ -1,0 +1,23 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 50px;
+  margin-left: -500px;
+}
+
+.Subtotal {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-checkout {
+  width: 90px;
+}
+
+.Cart-pic{
+  height: 60px;
+  width: 60px;
+  display: flex;
+  margin-top: 10px;
+}
