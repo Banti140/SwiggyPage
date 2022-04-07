@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 
 
 
-
-
 class MainMenuData extends Component {
 
   handleClick = () => {
