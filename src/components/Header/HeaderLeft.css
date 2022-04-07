@@ -1,0 +1,33 @@
+.header
+{
+    display:flex;
+    height: 80px;
+}
+
+.logo_img
+{
+    height: 60px;
+    width: 60x;
+    padding: 10px;
+}
+
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.logo_and_location
+{
+   display: flex;
+   /* flex:1; */
+   margin-left: 50px;
+   margin-right: 850px;
+}
+
+.HeaderRight
+{
+    flex: 2;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
