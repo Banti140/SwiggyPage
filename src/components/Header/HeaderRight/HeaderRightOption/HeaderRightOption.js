@@ -11,6 +11,7 @@ HeaderRightOption.propTypes = {
   details: PropTypes.object
 }
 
+
 function HeaderRightOption(props) {
   const { details } = props;
   return <div> 

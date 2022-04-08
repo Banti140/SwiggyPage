@@ -48,6 +48,7 @@ class Cart extends Component {
       {cartDetails.map(this.printCartedItem)}
 
       <p> Total :  {totalAmount}Rs</p>
+      
       <Link to='/thankYou'>
       <button className="btn-checkout">Move to Buy</button>
       </Link>

@@ -4,4 +4,5 @@ function Thankyou(){
     )
 }
 
+
 export default Thankyou;
