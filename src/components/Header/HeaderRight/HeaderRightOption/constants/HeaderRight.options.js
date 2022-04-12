@@ -8,11 +8,7 @@ const OPTIONS = [
       id: 2,
     },
     {
-      name: "Cart",
-      id: 4, 
-    },
-    {
-      name: "Sign In",
+      name: "SignIn",
       id: 3,
     }];
 

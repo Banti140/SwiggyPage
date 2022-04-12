@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Cart.css";
-import Button from "@material-ui/core/Button";
+import { Link } from 'react-router-dom'
 import RESTRODISCHES from "../constants/mainMenuLists.option";
 
 class Cart extends Component {
@@ -48,6 +48,9 @@ class Cart extends Component {
       {cartDetails.map(this.printCartedItem)}
 
       <p> Total :  {totalAmount}Rs</p>
+      <Link to='/thankYou'>
+      <button className="btn-checkout">Move to Buy</button>
+      </Link>
     </div>
   }
 }
