@@ -61,5 +61,4 @@ class MainMenuLists extends Component {
   }
 }
 
-
 export default MainMenuLists;

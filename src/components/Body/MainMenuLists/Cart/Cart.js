@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import "./Cart.css";
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import RESTRODISCHES from "../constants/mainMenuLists.option";
+// import { useSelector } from "react-redux";
+import {connect} from "react-redux";
+import { buyItem } from "../../../../redux/actions/productsActions";
+// import Thankyou from "../../../../ThankYou/Thankyou";
 
 class Cart extends Component {
 
@@ -37,10 +41,16 @@ class Cart extends Component {
     return totalAmount;
   }
 
+
+  DisplayMessage(){
+    const message=buyItem()
+    alert(message.payload);
+  }
+
   render() {
     const { cartDetails } = this.props;
     let totalAmount = this.getTotal(cartDetails);
-
+   
     return <div className="cart">
       <h1>Cart</h1>
       <p>from Kitchens of Punjab</p>
@@ -49,11 +59,18 @@ class Cart extends Component {
 
       <p> Total :  {totalAmount}Rs</p>
       
-      <Link to='/thankYou'>
-      <button className="btn-checkout">Move to Buy</button>
-      </Link>
+      {/* <Link to='/thankYou'> */} 
+      <button className="btn-checkout" onClick={this.DisplayMessage}>Move to Buy</button>
+      {/* </Link> */}
     </div>
   }
 }
 
-export default Cart;
+const mapDispatchToProps={
+  buyItem,
+}
+
+export default connect(null, mapDispatchToProps)(Cart)
+
+
+// export default Cart;
