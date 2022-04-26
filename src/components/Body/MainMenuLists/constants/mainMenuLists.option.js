@@ -9,6 +9,7 @@ const RESTRODISCHES = [
         "An authentic veg platter with 3 pieces of Paneer Achari, 3 pieces of Malai Chaap",
       price: "90Rs",
       pic_Id: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/wlvkgf6axda8thsttpoq",
+      category:"italian",
     }
   },
   {
@@ -21,6 +22,7 @@ const RESTRODISCHES = [
         "3 pieces of Dhaniya Chicken, 3 pieces of Tawa Chicken and 3 pieces of Chicken Kebab",
       price: "60Rs",
       pic_Id: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/l7vj46vepsesbnjmx3ur",
+      category:"chinese",
     }
   },
   {
@@ -32,6 +34,7 @@ const RESTRODISCHES = [
         "Succulent chicken marinated & flavoured with fresh coriander, grilled to perfection",
       price: "40Rs",
       pic_Id: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vgkmyncx7yxcug1hvf1u",
+      category:"indian",
     }
   },
   {
@@ -41,6 +44,7 @@ const RESTRODISCHES = [
     id: 4,
     description: "Spicy chicken Tikka prepped Patiala-style.",
     price: "50Rs",
+    category:"indian",
     pic_Id: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vgkmyncx7yxcug1hvf1u",
   }
   },
@@ -51,6 +55,7 @@ const RESTRODISCHES = [
       id: 5,
       description: "Bathinda-style spicy-charred Tandoori chicken.",
       price: "30Rs",
+      category:"chinese",
       pic_Id: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vgkmyncx7yxcug1hvf1u",
     }
   }

@@ -3,10 +3,7 @@ import "./MainMenuData.css";
 import Button from "@material-ui/core/Button";
 import PropTypes from 'prop-types';
 
-
-
 class MainMenuData extends Component {
-
   handleClick = () => {
     const { dishClicked, id } = this.props;
     return dishClicked({ id });
