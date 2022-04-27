@@ -3,57 +3,55 @@ import { indian, chinese, italian } from "../../../redux/actions/productsActions
 import MainMenuData from "./MainMenuData";
 import "./MainMenuLists.css";
 
-function fetchChinese(dispatch) {
+function findClickedItem(dish, clickedState) {
+    return dish.details.category === clickedState;
+}
+
+function renderingClickedItem(clickedState) {
+    return ((dish) => {
+        const isClicked = findClickedItem(dish, clickedState);
+        if (isClicked) {
+            return (
+                <MainMenuData
+                    name={dish.details.name}
+                    price={dish.details.price}
+                    description={dish.details.description}
+                    pic_Id={dish.details.pic_Id}
+                />
+            );
+        }
+    })
+}
+
+function actionDispatcher(dispatch, handleClick) {
     return () => {
-        dispatch(chinese())
+        dispatch(handleClick())
     }
 }
 
-function fetchIndian(dispatch) {
-    return () => {
-        dispatch(indian())
-    }
-}
-
-function fetchItalian(dispatch) {
-    return () => {
-        dispatch(italian())
-    }
-}
+// function renderClickedItem(dishList, clickedState) {
+//     return dishList.map(renderingClickedItem(clickedState))
+// }
 
 function Menu(props) {
-    const clickedState = useSelector((state) => state.buyItem.categorySelected);
+    const clickedState = useSelector((state) => state.ItemsReducer.categorySelected);
     const dispatch = useDispatch();
-    let { dishList, mainMenuItems} = props;
+    let { dishList, mainMenuItems } = props;
     return (
         <div>
             <div className="restrolists">
                 <div className="restrolists-left">
                     Recommended
                     <div className="recommendation">
-                        <div onClick={fetchIndian(dispatch)}>Indian</div>
-                        <div onClick={fetchChinese(dispatch)}> Chinese </div>
-                        <div onClick={fetchItalian(dispatch)}>Italian</div>
+                        <div onClick={actionDispatcher(dispatch, indian)}>Indian</div>
+                        <div onClick={actionDispatcher(dispatch, chinese)}> Chinese </div>
+                        <div onClick={actionDispatcher(dispatch, italian)}>Italian</div>
                     </div>
                 </div>
                 <div>
-                    {dishList.map((dish) => {
-                        console.log(clickedState + "123");
 
-                        if (dish.details.category === clickedState) {
-                            console.log("1231");
-                            return (
-                                <MainMenuData 
-                                name={dish.details.name}
-                                 price={dish.details.price} 
-                                 description={dish.details.description}
-                                  pic_Id={dish.details.pic_Id} 
-                                  />
-                                );
-                        }
-                    }
-                    )
-                    }
+                    {dishList.map(renderingClickedItem(clickedState))}
+
                 </div>
             </div>
         </div>

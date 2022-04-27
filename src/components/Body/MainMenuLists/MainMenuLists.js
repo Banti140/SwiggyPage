@@ -4,7 +4,7 @@ import "./MainMenuLists.css";
 import RESTRODISCHES from "./constants/mainMenuLists.option.js"
 import Cart from "./Cart/Cart";
 import { handleClick } from "./helpers/mainMenuLists.general";
-import { indian,chinese,italian } from "../../../redux/actions/productsActions";
+// import { indian,chinese,italian } from "../../../redux/actions/productsActions";
 import Menu from "./Menu";
 
 class MainMenuLists extends Component {

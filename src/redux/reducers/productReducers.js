@@ -5,7 +5,7 @@ const initialState = {
   categorySelected:""
 };
 
-export function buyItemReducer(state = initialState, action) {
+export function ProductReducer(state = initialState, action) {
   
   switch (action.type) {
     case BUY_ITEM:
